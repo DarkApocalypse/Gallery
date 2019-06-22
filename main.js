@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var fadeDuration = 400;				//Durée en millisecondes de l'animation
 	var idleDuration = 1000;			//Durée en millisecondes du temps d'affichage
-	var selectorParent = ".apocalypse-gallery .slider";		//Sélecteur parent
+	var selectorParent = ".apocalypse-gallery > tbody";		//Sélecteur parent
 	var selectorLine = ".moving";		//Sélecteur pour les éléments à afficher
 	$(document.body).append(
 		"<"+"style>"+
