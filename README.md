@@ -1,6 +1,5 @@
 # Gallery
 
-# fadeLine
 Affiche une à une des lignes sur forum actif.
 
 Le BBCode par défaut pour que ça fonctionne est:
