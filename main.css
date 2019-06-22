@@ -1,9 +1,10 @@
-*{
+
+.apocalypse-gallery, .apocalypse-gallery *{
 box-sizing:border-box;
 margin:0;
 padding:0;
 }
-.container{
+.apocalypse-gallery{
 position:relative;
 overflow: hidden;
 width: 300px;
@@ -11,12 +12,12 @@ height:150px;
 border:1px solid gray;
 display:block;
 }
-.slider{
+.apocalypse-gallery > tbody{
 position: absolute;
 display:block;
 top: 0;
 }
-.moving{
+.apocalypse-gallery > tbody > .moving{
 display:inline-block;
 width: 300px;
 height:150px;
