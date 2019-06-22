@@ -3,15 +3,6 @@ $(document).ready(function(){
 	var idleDuration = 1000;			//Durée en millisecondes du temps d'affichage
 	var selectorParent = ".apocalypse-gallery > tbody";		//Sélecteur parent
 	var selectorLine = ".moving";		//Sélecteur pour les éléments à afficher
-	$(document.body).append(
-		"<"+"style>"+
-		selectorParent + 
-		"{"+
-		"width:" + ($(selectorParent + " > " + selectorLine).length * $(selectorParent + " > " + selectorLine).width()) + "px;"+
-		"height:" + $(selectorParent + " > " + selectorLine).height() + "px" +
-		"}" + 
-		"<" + "/style>"
-	);
 	var parents = $(selectorParent);
 	var f = function(parent){
 		var i = 0; t = null;
@@ -30,8 +21,19 @@ $(document).ready(function(){
 		show();
 		
 	};
+	var css = "";
 	for(var j=0; j < parents.length; j++){		//Gestion de multiples galleries
 		var e = $(parents[j]);
+		e.addClass(selectorParent + "-" + j);
+		css+=(
+		selectorParent + "-" + j + 
+			"{"+
+			"width:" + (e.find(" > " + selectorLine).length * e.find(" > " + selectorLine).width()) + "px;"+
+			"height:" + e.find(" > " + selectorLine).height() + "px" +
+			"}"
+		)
 		f(e);
 	};
+	
+	$(document.body).append("<"+"style>" + css + "<" + "/style>");
 });
