@@ -1,0 +1,23 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+.container{
+position:relative;
+overflow: hidden;
+width: 300px;
+height:150px;
+border:1px solid gray;
+display:block;
+}
+.slider{
+position: absolute;
+display:block;
+top: 0;
+}
+.moving{
+display:inline-block;
+width: 300px;
+height:150px;
+}
